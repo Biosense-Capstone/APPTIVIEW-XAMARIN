@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Apptiview.Views.general"
+              Title="Apptiview"
+             x:Name="BrowseItemsPage">
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <Button Text="test" x:Name="btn"  Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" IsEnabled="True"/>
+        <Button Text="btnCoin Menu" x:Name="coinMenu" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
+    </StackLayout>
+</ContentPage>
