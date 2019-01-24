@@ -37,7 +37,7 @@
           "lib/portable-net45+win8+wpa81+wp8/Plugin.BLE.dll": {}
         }
       },
-      "Xamarin.Forms/3.1.0.697729": {
+      "Xamarin.Forms/3.4.0.1029999": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -50,18 +50,20 @@
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {}
         },
         "build": {
-          "build/netstandard2.0/Xamarin.Forms.props": {},
-          "build/netstandard2.0/Xamarin.Forms.targets": {}
+          "build/Xamarin.Forms.props": {},
+          "build/Xamarin.Forms.targets": {}
         }
       }
     }
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "a/iSwnRZb+LHFk49hQOyThh/ZNC3vsbZsF65XwQIb863qF6msmhdQtxGXFL28Ob2NsCz/drEj28BJd/YPpLRBg==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -71,10 +73,12 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -198,16 +202,19 @@
       ]
     },
     "Plugin.BLE/1.3.0": {
-      "sha512": "5zISlRkf7SrklXTOefdrRmapQS6lDQS2LR9JfqMYTWYYIYfJ5sRmtA5wTf2UcSPMTxGxh8H0IrWXgXwqLb2bLQ==",
+      "sha512": "5sD/YwTADSWES04iY28+Wc2alvq5kdPeH24oZuQxNiDTL0eAyxioJWdQ0JuKH6GyWNd9Zmv5006sgYcbNVwSwQ==",
       "type": "package",
       "path": "plugin.ble/1.3.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/MonoAndroid/Plugin.BLE.Abstractions.XML",
         "lib/MonoAndroid/Plugin.BLE.Abstractions.dll",
+        "lib/MonoAndroid/Plugin.BLE.Abstractions.dll.mdb",
         "lib/MonoAndroid/Plugin.BLE.Abstractions.pdb",
         "lib/MonoAndroid/Plugin.BLE.XML",
         "lib/MonoAndroid/Plugin.BLE.dll",
+        "lib/MonoAndroid/Plugin.BLE.dll.mdb",
         "lib/MonoAndroid/Plugin.BLE.pdb",
         "lib/Xamarin.iOS10/Plugin.BLE.Abstractions.XML",
         "lib/Xamarin.iOS10/Plugin.BLE.Abstractions.dll",
@@ -225,24 +232,25 @@
         "plugin.ble.nuspec"
       ]
     },
-    "Xamarin.Forms/3.1.0.697729": {
-      "sha512": "oYfHpCY9i9wN4vLllsIhzDZY5iOCUtZ3RHxID1fiXOcf7yL9UA16NUsI8opoNmpv1Ru2lTGG9ZKKT1sYS6DLjA==",
+    "Xamarin.Forms/3.4.0.1029999": {
+      "sha512": "et3gAEFuO8E+VgZU0IQnMhgk9m8mYHN6q4Cc2mKhqPV7EA7qG/aYZKojP3/dXthruoi0T18PW1+BgEW2l40D5w==",
       "type": "package",
-      "path": "xamarin.forms/3.1.0.697729",
+      "path": "xamarin.forms/3.4.0.1029999",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
-        "build/netstandard1.0/Mono.Cecil.Mdb.dll",
-        "build/netstandard1.0/Mono.Cecil.Pdb.dll",
-        "build/netstandard1.0/Mono.Cecil.Rocks.dll",
-        "build/netstandard1.0/Mono.Cecil.dll",
-        "build/netstandard1.0/System.CodeDom.dll",
-        "build/netstandard1.0/Xamarin.Forms.Build.Tasks.dll",
-        "build/netstandard1.0/Xamarin.Forms.Core.dll",
-        "build/netstandard1.0/Xamarin.Forms.DefaultItems.props",
-        "build/netstandard1.0/Xamarin.Forms.DefaultItems.targets",
-        "build/netstandard1.0/Xamarin.Forms.Xaml.dll",
-        "build/netstandard1.0/Xamarin.Forms.props",
-        "build/netstandard1.0/Xamarin.Forms.targets",
+        "build/Xamarin.Forms.DefaultItems.props",
+        "build/Xamarin.Forms.DefaultItems.targets",
+        "build/Xamarin.Forms.props",
+        "build/Xamarin.Forms.targets",
+        "build/net46/Mono.Cecil.Mdb.dll",
+        "build/net46/Mono.Cecil.Pdb.dll",
+        "build/net46/Mono.Cecil.Rocks.dll",
+        "build/net46/Mono.Cecil.dll",
+        "build/net46/System.ValueTuple.dll",
+        "build/net46/Xamarin.Forms.Build.Tasks.dll",
+        "build/net46/Xamarin.Forms.Core.dll",
+        "build/net46/Xamarin.Forms.Xaml.dll",
         "build/netstandard2.0/Mono.Cecil.Mdb.dll",
         "build/netstandard2.0/Mono.Cecil.Pdb.dll",
         "build/netstandard2.0/Mono.Cecil.Rocks.dll",
@@ -250,21 +258,15 @@
         "build/netstandard2.0/System.CodeDom.dll",
         "build/netstandard2.0/Xamarin.Forms.Build.Tasks.dll",
         "build/netstandard2.0/Xamarin.Forms.Core.dll",
-        "build/netstandard2.0/Xamarin.Forms.DefaultItems.props",
-        "build/netstandard2.0/Xamarin.Forms.DefaultItems.targets",
         "build/netstandard2.0/Xamarin.Forms.Xaml.dll",
-        "build/netstandard2.0/Xamarin.Forms.props",
-        "build/netstandard2.0/Xamarin.Forms.targets",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Core.Design.dll",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/MonoAndroid10/FormsViewGroup.dll",
-        "lib/MonoAndroid10/FormsViewGroup.dll.mdb",
         "lib/MonoAndroid10/FormsViewGroup.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Core.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll",
-        "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll.mdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.dll",
@@ -353,6 +355,7 @@
         "lib/uap10.0/Design/Xamarin.Forms.Core.Design.dll",
         "lib/uap10.0/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/uap10.0/Xamarin.Forms.Core.dll",
+        "lib/uap10.0/Xamarin.Forms.Core.pdb",
         "lib/uap10.0/Xamarin.Forms.Core.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pri",
@@ -371,8 +374,9 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Xamarin.Forms.Platform.UAP.xr.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
+        "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.3.1.0.697729.nupkg.sha512",
+        "xamarin.forms.3.4.0.1029999.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     }
@@ -381,7 +385,7 @@
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
       "Plugin.BLE >= 1.3.0",
-      "Xamarin.Forms >= 3.1.0.697729"
+      "Xamarin.Forms >= 3.4.0.1029999"
     ]
   },
   "packageFolders": {
@@ -417,6 +421,9 @@
         }
       },
       "warningProperties": {
+        "noWarn": [
+          "NU1701"
+        ],
         "warnAsError": [
           "NU1605"
         ]
@@ -437,7 +444,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[3.1.0.697729, )"
+            "version": "[3.4.0.1029999, )"
           }
         },
         "imports": [
@@ -447,17 +454,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Plugin.BLE 1.3.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Plugin.BLE",
-      "targetGraphs": [
-        ".NETStandard,Version=v2.0"
-      ]
-    }
-  ]
+  }
 }

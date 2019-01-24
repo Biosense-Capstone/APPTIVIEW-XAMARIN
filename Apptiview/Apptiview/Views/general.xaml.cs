@@ -22,16 +22,16 @@ namespace Apptiview.Views
             InitializeComponent();
         }
 
-        int count = 0;
-        void Button_Clicked(object sender, System.EventArgs e)
-        {
-            count++;
-            ((Button)sender).Text = $"You clicked {count} times.";
-            if (count == 5)
-            {
-                btn.IsEnabled = false;
-                this.DisplayAlert("No Access", "Need to buy more btnCoins to access more presses", "Ok");
-            }
-        }
+        //int count = 0;
+        //void Button_Clicked(object sender, System.EventArgs e)
+        //{
+        //    count++;
+        //    ((Button)sender).Text = $"You clicked {count} times.";
+        //    if (count == 5)
+        //    {
+        //        btn.IsEnabled = false;
+        //        this.DisplayAlert("No Access", "Need to buy more btnCoins to access more presses", "Ok");
+        //    }
+        //}
     }
 }

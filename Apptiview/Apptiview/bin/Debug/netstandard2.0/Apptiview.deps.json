@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "0d5fca3040c4a4cda49b875c0c51a8bfcff34155"
+    "signature": "3d0ce66eb1a5babdf15ee0187d28eebdb9c42668"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,7 +11,8 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Plugin.BLE": "1.3.0",
-          "Xamarin.Forms": "3.1.0.697729"
+          "Xamarin.Forms": "3.4.0.1029999",
+          "Mono.Android": "0.0.0.0"
         },
         "runtime": {
           "Apptiview.dll": {}
@@ -29,11 +30,16 @@
           "lib/portable-net45+win8+wpa81+wp8/Plugin.BLE.dll": {}
         }
       },
-      "Xamarin.Forms/3.1.0.697729": {
+      "Xamarin.Forms/3.4.0.1029999": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {},
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {}
+        }
+      },
+      "Mono.Android/0.0.0.0": {
+        "runtime": {
+          "Mono.Android.dll": {}
         }
       }
     }
@@ -47,30 +53,35 @@
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "sha512-a/iSwnRZb+LHFk49hQOyThh/ZNC3vsbZsF65XwQIb863qF6msmhdQtxGXFL28Ob2NsCz/drEj28BJd/YPpLRBg==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
     "NETStandard.Library/2.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "sha512-548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
     "Plugin.BLE/1.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5zISlRkf7SrklXTOefdrRmapQS6lDQS2LR9JfqMYTWYYIYfJ5sRmtA5wTf2UcSPMTxGxh8H0IrWXgXwqLb2bLQ==",
+      "sha512": "sha512-5sD/YwTADSWES04iY28+Wc2alvq5kdPeH24oZuQxNiDTL0eAyxioJWdQ0JuKH6GyWNd9Zmv5006sgYcbNVwSwQ==",
       "path": "plugin.ble/1.3.0",
       "hashPath": "plugin.ble.1.3.0.nupkg.sha512"
     },
-    "Xamarin.Forms/3.1.0.697729": {
+    "Xamarin.Forms/3.4.0.1029999": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oYfHpCY9i9wN4vLllsIhzDZY5iOCUtZ3RHxID1fiXOcf7yL9UA16NUsI8opoNmpv1Ru2lTGG9ZKKT1sYS6DLjA==",
-      "path": "xamarin.forms/3.1.0.697729",
-      "hashPath": "xamarin.forms.3.1.0.697729.nupkg.sha512"
+      "sha512": "sha512-et3gAEFuO8E+VgZU0IQnMhgk9m8mYHN6q4Cc2mKhqPV7EA7qG/aYZKojP3/dXthruoi0T18PW1+BgEW2l40D5w==",
+      "path": "xamarin.forms/3.4.0.1029999",
+      "hashPath": "xamarin.forms.3.4.0.1029999.nupkg.sha512"
+    },
+    "Mono.Android/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

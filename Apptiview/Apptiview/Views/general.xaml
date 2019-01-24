@@ -8,7 +8,7 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        <Button Text="test" x:Name="btn"  Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" IsEnabled="True"/>
-        <Button Text="btnCoin Menu" x:Name="coinMenu" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
+        <!--<Button Text="test" x:Name="btn"  Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" IsEnabled="True"/>
+        <Button Text="btnCoin Menu" x:Name="coinMenu" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>-->
     </StackLayout>
 </ContentPage>

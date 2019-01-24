@@ -46,8 +46,6 @@ namespace Apptiview.Views
             // Create Device list
             this.DeviceList = new ObservableCollection<string>();
 
-            var testString = "temp";
-
             // Updates bluetooth state field
             ble.StateChanged += (s, e) =>
             {
