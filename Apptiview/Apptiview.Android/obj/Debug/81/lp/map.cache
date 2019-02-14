@@ -1,7 +1,14 @@
 Apptiview
 FormsViewGroup
+Meta.Numerics
+Microcharts
+Microcharts.Droid
+Microcharts.Forms
 Plugin.BLE.Abstractions
 Plugin.BLE
+SkiaSharp
+SkiaSharp.Views.Android
+SkiaSharp.Views.Forms
 System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
@@ -28,3 +35,5 @@ Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
 netstandard
 System.Resources.ResourceManager
+System.Runtime.Numerics
+System.Collections

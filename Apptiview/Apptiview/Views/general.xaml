@@ -1,14 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              x:Class="Apptiview.Views.general"
               Title="Apptiview"
              x:Name="BrowseItemsPage">
+
     <ContentPage.ToolbarItems>
     </ContentPage.ToolbarItems>
 
-    <StackLayout>
-        <!--<Button Text="test" x:Name="btn"  Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" IsEnabled="True"/>
-        <Button Text="btnCoin Menu" x:Name="coinMenu" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>-->
-    </StackLayout>
+    <!--<StackLayout>
+        --><!--<Button Text="test" x:Name="btn"  Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" IsEnabled="True"/>
+        <Button Text="btnCoin Menu" x:Name="coinMenu" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>--><!--
+        
+    </StackLayout>-->
+
+    <ScrollView>
+        <StackLayout Spacing="0">
+            <StackLayout BackgroundColor="#4286f4">
+                <Label Text="Random Chart" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                <microcharts:ChartView x:Name="chartView" HeightRequest="250" Chart="{Binding Chart}"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
 </ContentPage>

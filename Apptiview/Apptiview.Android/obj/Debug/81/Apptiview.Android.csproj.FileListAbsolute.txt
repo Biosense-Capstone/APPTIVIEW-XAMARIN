@@ -1,11 +1,11 @@
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\Apptiview.Android.nuget.stamp
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Apptiview.Android.dll
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Apptiview.Android.pdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\com.companyname.Apptiview.apk
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\com.companyname.Apptiview-Signed.apk
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Apptiview.dll
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Apptiview.pdb
-C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
-C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\Apptiview.Android.nuget.stamp
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\Apptiview.Android.csprojAssemblyReference.cache
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\libraryimports.cache.stamp
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\res.flag
@@ -56,6 +56,10 @@ C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Deb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\System.ServiceModel.Internals.pdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\System.Web.Services.pdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Mono.Security.pdb
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Apptiview.dll.mdb
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Meta.Numerics.dll.mdb
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Plugin.BLE.Abstractions.dll.mdb
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Plugin.BLE.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Apptiview.Android.pdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\FormsViewGroup.pdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Mono.Android.pdb
@@ -78,13 +82,12 @@ C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Deb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\System.ServiceModel.Internals.pdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\System.Web.Services.pdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Mono.Security.pdb
-C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Apptiview.dll.mdb
-C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Plugin.BLE.Abstractions.dll.mdb
-C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Plugin.BLE.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Apptiview.dll.mdb
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Meta.Numerics.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Plugin.BLE.Abstractions.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Plugin.BLE.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Apptiview.dll.mdb
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Meta.Numerics.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Plugin.BLE.Abstractions.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Plugin.BLE.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Apptiview.Android.pdb
@@ -112,5 +115,6 @@ C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Deb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview\bin\Debug\netstandard2.0\Apptiview.dll
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Apptiview.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Apptiview.dll.mdb
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Meta.Numerics.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Plugin.BLE.Abstractions.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Plugin.BLE.dll.mdb

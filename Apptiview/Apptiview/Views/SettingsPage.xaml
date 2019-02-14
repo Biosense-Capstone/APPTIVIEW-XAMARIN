@@ -5,10 +5,10 @@
              x:Class="Apptiview.Views.SettingsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Bluetooth" x:Name="bleBtn" Clicked="ScanBluetooth" HorizontalOptions="End" VerticalOptions="Start"/>
-            <ListView ItemsSource="{Binding StateBT}" />
-            <ListView ItemsSource="{Binding DeviceList}" />
-            <ListView ItemsSource="{Binding test}" ItemSelected="OnSelection" />
+            <Button Text="Scan" x:Name="bleBtn" Clicked="ScanBluetooth" HorizontalOptions="End" VerticalOptions="Start"/>
+            <ListView ItemsSource="{Binding StateBT}" SelectionMode="None"/>
+            <ListView ItemsSource="{Binding DeviceList}" ItemSelected="OnSelection" />
+            <!--<ListView ItemsSource="{Binding test}" ItemSelected="OnSelection" />-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

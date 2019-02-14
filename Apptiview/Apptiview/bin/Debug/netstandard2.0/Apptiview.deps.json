@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "3d0ce66eb1a5babdf15ee0187d28eebdb9c42668"
+    "signature": "9275c4c250d8c70a0bb4f588323e02bc9abfcbb4"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,9 @@
     ".NETStandard,Version=v2.0/": {
       "Apptiview/1.0.0": {
         "dependencies": {
+          "Meta.Numerics": "4.0.7",
+          "Microcharts": "0.7.1",
+          "Microcharts.Forms": "0.7.1",
           "NETStandard.Library": "2.0.3",
           "Plugin.BLE": "1.3.0",
           "Xamarin.Forms": "3.4.0.1029999",
@@ -16,6 +19,30 @@
         },
         "runtime": {
           "Apptiview.dll": {}
+        }
+      },
+      "Meta.Numerics/4.0.7": {
+        "runtime": {
+          "lib/netstandard1.1/Meta.Numerics.dll": {}
+        }
+      },
+      "Microcharts/0.7.1": {
+        "dependencies": {
+          "SkiaSharp": "1.59.1",
+          "System.ValueTuple": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard1.4/Microcharts.dll": {}
+        }
+      },
+      "Microcharts.Forms/0.7.1": {
+        "dependencies": {
+          "SkiaSharp.Views.Forms": "1.59.1.1",
+          "System.ValueTuple": "4.4.0",
+          "Xamarin.Forms": "3.4.0.1029999"
+        },
+        "runtime": {
+          "lib/netstandard1.4/Microcharts.Forms.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -30,6 +57,21 @@
           "lib/portable-net45+win8+wpa81+wp8/Plugin.BLE.dll": {}
         }
       },
+      "SkiaSharp/1.59.1": {
+        "runtime": {
+          "lib/netstandard1.3/SkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/1.59.1.1": {
+        "dependencies": {
+          "SkiaSharp": "1.59.1",
+          "Xamarin.Forms": "3.4.0.1029999"
+        },
+        "runtime": {
+          "lib/netstandard1.3/SkiaSharp.Views.Forms.dll": {}
+        }
+      },
+      "System.ValueTuple/4.4.0": {},
       "Xamarin.Forms/3.4.0.1029999": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -49,6 +91,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Meta.Numerics/4.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bnxsVVTxWUb+CdTelTRqghoXF+qvGZkrexc8OV9PVx6CH8Df57vOsaDomqHQwV/wiDw9Pzf4yZeFsYpEjH+1Ew==",
+      "path": "meta.numerics/4.0.7",
+      "hashPath": "meta.numerics.4.0.7.nupkg.sha512"
+    },
+    "Microcharts/0.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4MX06Bk3Y34fNFk/LZ5YQGYisl+QtsgGS2imXFL6kZna4PP28aChPGG895b3t3PDhUWXw0mGpeJqvuV2y+vE9A==",
+      "path": "microcharts/0.7.1",
+      "hashPath": "microcharts.0.7.1.nupkg.sha512"
+    },
+    "Microcharts.Forms/0.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gNvdyHM2TlGN/B/vdIwTVLMQc0xsAe2rUoSYxYLFFGpMyhxbSmtYm//459jI2BG70sHKOG/QLfcjSfnsVFfzIw==",
+      "path": "microcharts.forms/0.7.1",
+      "hashPath": "microcharts.forms.0.7.1.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -70,6 +133,27 @@
       "sha512": "sha512-5sD/YwTADSWES04iY28+Wc2alvq5kdPeH24oZuQxNiDTL0eAyxioJWdQ0JuKH6GyWNd9Zmv5006sgYcbNVwSwQ==",
       "path": "plugin.ble/1.3.0",
       "hashPath": "plugin.ble.1.3.0.nupkg.sha512"
+    },
+    "SkiaSharp/1.59.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Pyq7tiXrysvxIlY2ddD/WSFR1EA0qCwMQIYQpCMVWKdA8Zy0aGqh5zcLALsR6rMlc3W4/0NdZR+B7xDtGuP2rg==",
+      "path": "skiasharp/1.59.1",
+      "hashPath": "skiasharp.1.59.1.nupkg.sha512"
+    },
+    "SkiaSharp.Views.Forms/1.59.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KeIn+4JYFQDdxRj/e6vC+ftuPe4ez+KOGV7PFJn/7rivv+YoAb9QzJ1RDofM1pDmZRYOzyw3ve22DtW3isbbRQ==",
+      "path": "skiasharp.views.forms/1.59.1.1",
+      "hashPath": "skiasharp.views.forms.1.59.1.1.nupkg.sha512"
+    },
+    "System.ValueTuple/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hBl0/yPqtMnwrsqCYSxYr4Abvo9hSVYmf+55EniEMyCEPJRM1VGr8o+kHeHJdEqgr6wrQMhZ7HowYmejruXStg==",
+      "path": "system.valuetuple/4.4.0",
+      "hashPath": "system.valuetuple.4.4.0.nupkg.sha512"
     },
     "Xamarin.Forms/3.4.0.1029999": {
       "type": "package",

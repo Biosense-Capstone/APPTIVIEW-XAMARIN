@@ -3654,6 +3654,7 @@ containing a value of this type.
         public static final int appbar_scrolling_view_behavior=0x7f0a0033;
         public static final int bottom_sheet_behavior=0x7f0a0034;
         public static final int character_counter_pattern=0x7f0a0035;
+        public static final int library_name=0x7f0a003c;
         public static final int mr_button_content_description=0x7f0a0000;
         public static final int mr_cast_button_connected=0x7f0a0001;
         public static final int mr_cast_button_connecting=0x7f0a0002;
