@@ -5,10 +5,13 @@
              x:Class="Apptiview.Views.SettingsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Scan" x:Name="bleBtn" Clicked="ScanBluetooth" HorizontalOptions="End" VerticalOptions="Start"/>
-            <ListView ItemsSource="{Binding StateBT}" SelectionMode="None"/>
-            <ListView ItemsSource="{Binding DeviceList}" ItemSelected="OnSelection" />
-            <!--<ListView ItemsSource="{Binding test}" ItemSelected="OnSelection" />-->
+            <ListView ItemsSource="{Binding StateBT}" SelectionMode="None" HeightRequest="50" SeparatorVisibility="None"/>
+            <Button Text="Scan" x:Name="bleBtn" Clicked="ScanBluetooth" HorizontalOptions="Center" VerticalOptions="Start"/>
+            <ListView ItemsSource="{Binding DeviceList}" ItemSelected="OnSelection" VerticalOptions="Start" />
+
+            <Button Text="SQL" x:Name="sqlBtn" Clicked="SQLQuery" HorizontalOptions="Center" VerticalOptions="Start"/>
+            <Button Text="Grab Table" x:Name="grabBtn" Clicked="grabTable" HorizontalOptions="Center" VerticalOptions="Start"/>
+            <ListView ItemsSource="{Binding accounts}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Apptiview.Views;
+using Microsoft.WindowsAzure.MobileServices;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Apptiview
@@ -14,7 +15,6 @@ namespace Apptiview
             InitializeComponent();
 
             MainPage = new MainPage();
-
         }
 
         protected override void OnStart()
@@ -33,4 +33,5 @@ namespace Apptiview
             // Handle when your app resumes
         }
     }
+
 }

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Apptiview</id>
+    <version>1.0.0</version>
+    <authors>Apptiview</authors>
+    <owners>Apptiview</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Meta.Numerics" version="4.0.7" exclude="Build,Analyzers" />
+        <dependency id="Microcharts" version="0.7.1" exclude="Build,Analyzers" />
+        <dependency id="Microcharts.Forms" version="0.7.1" exclude="Build,Analyzers" />
+        <dependency id="Plugin.BLE" version="1.3.0" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Forms" version="3.4.0.1029999" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview\bin\Release\netstandard2.0\Apptiview.dll" target="lib\netstandard2.0\Apptiview.dll" />
+  </files>
+</package>

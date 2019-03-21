@@ -11,7 +11,7 @@ using Android;
 
 namespace Apptiview.Droid
 {
-    [Activity(Label = "Apptiview", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Apptiview", Icon = "@mipmap/ic_launcher", RoundIcon = "@mipmap/ic_round_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
 
@@ -32,6 +32,8 @@ namespace Apptiview.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
             Locationpermissions();
+
+            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
         }
 
         bool Locationpermissions()

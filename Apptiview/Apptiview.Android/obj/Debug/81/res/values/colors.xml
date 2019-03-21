@@ -1,1 +1,1 @@
-<resources><color name="launcher_background">#FFFFFF</color><color name="colorPrimary">#3F51B5</color><color name="colorPrimaryDark">#303F9F</color><color name="colorAccent">#FF4081</color></resources>
+<resources><color name="launcher_background">#22252A</color><!--<color name="colorPrimary">#393E46</color>--><color name="colorPrimary">#22252A</color><!--<color name="colorPrimaryDark">#393E46</color>--><color name="colorPrimaryDark">#22252A</color><color name="colorAccent">#FF4081</color></resources>

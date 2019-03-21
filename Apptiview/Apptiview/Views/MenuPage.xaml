@@ -3,14 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Apptiview.Views.MenuPage"
              Title="Menu">
-    <StackLayout VerticalOptions="FillAndExpand">
+    <!--<StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#22252A">-->
+    <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#393E46">
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Grid Padding="10">
-                            <Label Text="{Binding Title}" FontSize="20"/>
+                            <Label Text="{Binding Title}" FontSize="20" TextColor="White"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

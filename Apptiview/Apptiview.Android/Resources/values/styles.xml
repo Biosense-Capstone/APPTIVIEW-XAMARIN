@@ -11,19 +11,38 @@
     <item name="windowActionBar">false</item>
     <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette -->
     <!-- colorPrimary is used for the default action bar background -->
-    <item name="colorPrimary">#2196F3</item>
+    <item name="colorPrimary">#22252A</item>
     <!-- colorPrimaryDark is used for the status bar -->
-    <item name="colorPrimaryDark">#1976D2</item>
+    <item name="colorPrimaryDark">#22252A</item>
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     <item name="colorAccent">#FF4081</item>
     <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
+
+    <!-- Controls at very least color of bars under input text --> 
+    <item name="colorControlNormal">#FFFFFF</item>
+    
+    <!-- I have no idea what these do -->
+    <!--<item name="colorControlActivated">#FF4081</item>-->
+    <!--<item name="colorControlHighlight">#FF4081</item>-->
+    <!--<item name="colorSwitchThumbNormal">#FF4081</item>-->
+
+    <!-- Highlight colors in android-->
+    <item name="android:colorPressedHighlight">@color/ListViewSelected</item>
+    <item name="android:colorLongPressedHighlight">@color/ListViewHighlighted</item>
+    <item name="android:colorFocusedHighlight">@color/ListViewSelected</item>
+    <item name="android:colorActivatedHighlight">@color/ListViewSelected</item>
+    <item name="android:activatedBackgroundIndicator">@color/ListViewSelected</item>
+    
     <item name="windowActionModeOverlay">true</item>
 
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
   </style>
 
+  <color name="ListViewSelected">#FF4081</color>
+  <color name="ListViewHighlighted">#000000</color>
+  
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">#FF4081</item>
   </style>

@@ -1,0 +1,204 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": "9275c4c250d8c70a0bb4f588323e02bc9abfcbb4"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "Apptiview/1.0.0": {
+        "dependencies": {
+          "Meta.Numerics": "4.0.7",
+          "Microcharts": "0.7.1",
+          "Microcharts.Forms": "0.7.1",
+          "NETStandard.Library": "2.0.3",
+          "Plugin.BLE": "1.3.0",
+          "Xamarin.Forms": "3.4.0.1029999",
+          "Mono.Android": "0.0.0.0"
+        },
+        "runtime": {
+          "Apptiview.dll": {}
+        }
+      },
+      "Meta.Numerics/4.0.7": {
+        "runtime": {
+          "lib/netstandard1.1/Meta.Numerics.dll": {
+            "assemblyVersion": "4.0.7.0",
+            "fileVersion": "4.0.7.0"
+          }
+        }
+      },
+      "Microcharts/0.7.1": {
+        "dependencies": {
+          "SkiaSharp": "1.59.1",
+          "System.ValueTuple": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard1.4/Microcharts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microcharts.Forms/0.7.1": {
+        "dependencies": {
+          "SkiaSharp.Views.Forms": "1.59.1.1",
+          "System.ValueTuple": "4.4.0",
+          "Xamarin.Forms": "3.4.0.1029999"
+        },
+        "runtime": {
+          "lib/netstandard1.4/Microcharts.Forms.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Plugin.BLE/1.3.0": {
+        "runtime": {
+          "lib/portable-net45+win8+wpa81+wp8/Plugin.BLE.Abstractions.dll": {
+            "assemblyVersion": "1.3.0.0",
+            "fileVersion": "1.3.0.0"
+          },
+          "lib/portable-net45+win8+wpa81+wp8/Plugin.BLE.dll": {
+            "assemblyVersion": "1.3.0.0",
+            "fileVersion": "1.3.0.0"
+          }
+        }
+      },
+      "SkiaSharp/1.59.1": {
+        "runtime": {
+          "lib/netstandard1.3/SkiaSharp.dll": {
+            "assemblyVersion": "1.59.0.0",
+            "fileVersion": "1.59.1.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.Forms/1.59.1.1": {
+        "dependencies": {
+          "SkiaSharp": "1.59.1",
+          "Xamarin.Forms": "3.4.0.1029999"
+        },
+        "runtime": {
+          "lib/netstandard1.3/SkiaSharp.Views.Forms.dll": {
+            "assemblyVersion": "1.59.0.0",
+            "fileVersion": "1.59.1.0"
+          }
+        }
+      },
+      "System.ValueTuple/4.4.0": {},
+      "Xamarin.Forms/3.4.0.1029999": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Mono.Android/0.0.0.0": {
+        "runtime": {
+          "Mono.Android.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Apptiview/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Meta.Numerics/4.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bnxsVVTxWUb+CdTelTRqghoXF+qvGZkrexc8OV9PVx6CH8Df57vOsaDomqHQwV/wiDw9Pzf4yZeFsYpEjH+1Ew==",
+      "path": "meta.numerics/4.0.7",
+      "hashPath": "meta.numerics.4.0.7.nupkg.sha512"
+    },
+    "Microcharts/0.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4MX06Bk3Y34fNFk/LZ5YQGYisl+QtsgGS2imXFL6kZna4PP28aChPGG895b3t3PDhUWXw0mGpeJqvuV2y+vE9A==",
+      "path": "microcharts/0.7.1",
+      "hashPath": "microcharts.0.7.1.nupkg.sha512"
+    },
+    "Microcharts.Forms/0.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gNvdyHM2TlGN/B/vdIwTVLMQc0xsAe2rUoSYxYLFFGpMyhxbSmtYm//459jI2BG70sHKOG/QLfcjSfnsVFfzIw==",
+      "path": "microcharts.forms/0.7.1",
+      "hashPath": "microcharts.forms.0.7.1.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a/iSwnRZb+LHFk49hQOyThh/ZNC3vsbZsF65XwQIb863qF6msmhdQtxGXFL28Ob2NsCz/drEj28BJd/YPpLRBg==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Plugin.BLE/1.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5sD/YwTADSWES04iY28+Wc2alvq5kdPeH24oZuQxNiDTL0eAyxioJWdQ0JuKH6GyWNd9Zmv5006sgYcbNVwSwQ==",
+      "path": "plugin.ble/1.3.0",
+      "hashPath": "plugin.ble.1.3.0.nupkg.sha512"
+    },
+    "SkiaSharp/1.59.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Pyq7tiXrysvxIlY2ddD/WSFR1EA0qCwMQIYQpCMVWKdA8Zy0aGqh5zcLALsR6rMlc3W4/0NdZR+B7xDtGuP2rg==",
+      "path": "skiasharp/1.59.1",
+      "hashPath": "skiasharp.1.59.1.nupkg.sha512"
+    },
+    "SkiaSharp.Views.Forms/1.59.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KeIn+4JYFQDdxRj/e6vC+ftuPe4ez+KOGV7PFJn/7rivv+YoAb9QzJ1RDofM1pDmZRYOzyw3ve22DtW3isbbRQ==",
+      "path": "skiasharp.views.forms/1.59.1.1",
+      "hashPath": "skiasharp.views.forms.1.59.1.1.nupkg.sha512"
+    },
+    "System.ValueTuple/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hBl0/yPqtMnwrsqCYSxYr4Abvo9hSVYmf+55EniEMyCEPJRM1VGr8o+kHeHJdEqgr6wrQMhZ7HowYmejruXStg==",
+      "path": "system.valuetuple/4.4.0",
+      "hashPath": "system.valuetuple.4.4.0.nupkg.sha512"
+    },
+    "Xamarin.Forms/3.4.0.1029999": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-et3gAEFuO8E+VgZU0IQnMhgk9m8mYHN6q4Cc2mKhqPV7EA7qG/aYZKojP3/dXthruoi0T18PW1+BgEW2l40D5w==",
+      "path": "xamarin.forms/3.4.0.1029999",
+      "hashPath": "xamarin.forms.3.4.0.1029999.nupkg.sha512"
+    },
+    "Mono.Android/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

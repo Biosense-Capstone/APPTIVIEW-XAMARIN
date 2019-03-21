@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apptiview.Android", "Apptiv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apptiview.iOS", "Apptiview\Apptiview.iOS\Apptiview.iOS.csproj", "{992BF4AC-98EC-4CA4-BA90-3AA125508E04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apptiview", "Apptiview\Apptiview\Apptiview.csproj", "{A48FEBE2-8C36-4F12-91BE-49D97AF0EC90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apptiview", "Apptiview\Apptiview\Apptiview.csproj", "{A48FEBE2-8C36-4F12-91BE-49D97AF0EC90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,7 +38,6 @@ Global
 		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
 		{992BF4AC-98EC-4CA4-BA90-3AA125508E04}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{992BF4AC-98EC-4CA4-BA90-3AA125508E04}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{992BF4AC-98EC-4CA4-BA90-3AA125508E04}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator
 		{992BF4AC-98EC-4CA4-BA90-3AA125508E04}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{992BF4AC-98EC-4CA4-BA90-3AA125508E04}.Debug|iPhone.Build.0 = Debug|iPhone

@@ -12,5 +12,11 @@ namespace Apptiview.Views
         {
             InitializeComponent();
         }
+
+        void OpenEEF(object sender, EventArgs e)
+        {
+            Uri uri = new Uri("http://eef.colorado.edu/");
+            Device.OpenUri(uri);
+        }
     }
 }
