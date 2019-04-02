@@ -22,7 +22,7 @@
                     </StackLayout>
                 </Frame>
 
-                <Label Text="{Binding packetLossCount}"  TextColor="White" Margin="0,10,0,10"/>
+                <!--<Label Text="{Binding packetLossCount}"  TextColor="White" Margin="0,10,0,10"/>-->
 
                 <!--<Frame Padding="0" CornerRadius="10" BackgroundColor="#EA9674" Margin="0,10,0,10">-->
                 <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">

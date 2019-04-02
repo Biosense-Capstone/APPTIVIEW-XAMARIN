@@ -33,11 +33,12 @@ namespace Apptiview.Views
 
         async void LogInCheck(object sender, System.EventArgs e)
         {
-            bool logInCheck = true;
-            if (logInCheck)
+            if ((user.Text == null && pass.Text == null) || (user.Text == "anpa2782@colorado.edu" && pass.Text == "password"))
             {
-                //await Application.Current.MainPage.Navigation.PopAsync();
                 await Navigation.PopModalAsync();
+            } else
+            {
+                await DisplayAlert("Not a valid login", "The login combo either doesn't exist or has not been created", "Ok");
             }
         }
 

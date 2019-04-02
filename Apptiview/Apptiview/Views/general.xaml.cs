@@ -41,7 +41,7 @@ namespace Apptiview.Views
         {
             InitializeComponent();
 
-            FourierTransformer ft = new FourierTransformer(100, FourierSign.Negative, FourierNormalization.Unitary);
+            FourierTransformer ft = new FourierTransformer(100, FourierSign.Negative, FourierNormalization.Inverse);
             List<Complex> sin = new List<Complex>();
             //Complex[] sin = new Complex[25];
             //int packetCount = 0;
@@ -52,6 +52,9 @@ namespace Apptiview.Views
             List<Entry> entries = new List<Entry>();
             List<Entry> fourierTransform = new List<Entry>();
             bool firstpass = false;
+
+            int packetCount = 0;
+
             CrossBluetoothLE.Current.Adapter.DeviceAdvertised += (s, e) =>
             {
                 // Check if we are connected to our devices and workout is running
@@ -64,7 +67,16 @@ namespace Apptiview.Views
                         Plugin.BLE.Abstractions.AdvertisementRecord[] advertisement = e.Device.AdvertisementRecords.ToArray();
                         var temp = advertisement[3].Data[0];
                         //sin[packetCount]
-                        entries.Add(new Entry(temp) { Color = SKColor.FromHsl(1, 100, 100, 255) });
+                        if (packetCount == 10)
+                        {
+                            entries.Add(new Entry(temp) { Color = SKColor.FromHsl(1, 100, 100, 255), ValueLabel = temp.ToString() });
+                            packetCount = 0;
+                        } else
+                        {
+                            entries.Add(new Entry(temp) { Color = SKColor.FromHsl(1, 100, 100, 255) });
+                            packetCount++;
+                        }
+                        //entries.Add(new Entry(temp) { Color = SKColor.FromHsl(1, 100, 100, 255) });
 
                         //System.Diagnostics.Debug.WriteLine(temp);
                         // Add value to our fourier list
@@ -75,7 +87,7 @@ namespace Apptiview.Views
                             Entries = entries,
                             LabelTextSize = 100,
                             LineSize = 10,
-                            LineMode = LineMode.Spline,
+                            LineMode = LineMode.Straight,
                             PointSize = 20,
                             BackgroundColor = SKColor.Parse("#393E46")
                         };
@@ -90,7 +102,7 @@ namespace Apptiview.Views
 
                             // Perform fourier
                             Complex[] xt = ft.Transform(sin);
-                            for (int i = 0; i < 100; i++)
+                            for (int i = 50; i < 100; i++)
                             {
                                 if (firstpass == true)
                                 {
@@ -98,13 +110,21 @@ namespace Apptiview.Views
                                 }
                                 fourierTransform.Add(new Entry((float)Meta.Numerics.ComplexMath.Abs(xt[i])) { Color = SKColor.FromHsl(1, 100, 100, 255) });
                             }
+                            for (int j = 0; j < 50; j++)
+                            {
+                                if (firstpass == true)
+                                {
+                                    fourierTransform.RemoveAt(0);
+                                }
+                                fourierTransform.Add(new Entry((float)Meta.Numerics.ComplexMath.Abs(xt[j])) { Color = SKColor.FromHsl(1, 100, 100, 255) });
+                            }
                             firstpass = true;
                             var fChart = new LineChart()
                             {
                                 Entries = fourierTransform,
                                 LabelTextSize = 100,
                                 LineSize = 10,
-                                LineMode = LineMode.Spline,
+                                LineMode = LineMode.Straight,
                                 PointSize = 20,
                                 BackgroundColor = SKColor.Parse("#393E46")
                             };

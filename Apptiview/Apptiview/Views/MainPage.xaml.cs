@@ -40,6 +40,10 @@ namespace Apptiview.Views
                     case (int)MenuItemType.Settings:
                         MenuPages.Add(id, new NavigationPage(new SettingsPage(Adapter)));
                         break;
+
+                    case (int)MenuItemType.Logout:
+                        MenuPages.Add(id, new NavigationPage(new general()));
+                        break;
                 }
             }
 

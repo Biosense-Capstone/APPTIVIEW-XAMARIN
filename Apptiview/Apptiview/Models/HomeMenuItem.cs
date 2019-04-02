@@ -8,7 +8,8 @@ namespace Apptiview.Models
     {
         Apptiview,
         About,
-        Settings
+        Settings,
+        Logout,
     }
     public class HomeMenuItem
     {
