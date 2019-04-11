@@ -4364,6 +4364,7 @@
       "Meta.Numerics >= 4.0.7",
       "Microcharts >= 0.7.1",
       "Microcharts.Forms >= 0.7.1",
+      "Microsoft.Azure.Mobile.Client >= 4.1.1",
       "Microsoft.Azure.Mobile.Client.SQLiteStore >= 4.1.1",
       "NETStandard.Library >= 2.0.3",
       "Plugin.BLE >= 1.3.0",
@@ -4426,6 +4427,10 @@
           "Microcharts.Forms": {
             "target": "Package",
             "version": "[0.7.1, )"
+          },
+          "Microsoft.Azure.Mobile.Client": {
+            "target": "Package",
+            "version": "[4.1.1, )"
           },
           "Microsoft.Azure.Mobile.Client.SQLiteStore": {
             "target": "Package",

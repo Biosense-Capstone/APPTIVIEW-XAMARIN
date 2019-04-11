@@ -28,6 +28,8 @@ namespace Apptiview.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SettingsPage : ContentPage
     {
+        static bool scanning = false;
+
         public ObservableCollection<string> DeviceList { get; set; }
         public ObservableCollection<string> StateBT { get; set; }
         public List<Guid> ids;
@@ -184,6 +186,16 @@ namespace Apptiview.Views
 
         async void ScanBluetooth(Object sender, System.EventArgs e)
         {
+
+            // Once scanner is on, it will not turn off. Needs to stay on to receive advertisements
+            if (scanning == false)
+            {
+                scanning = true;
+            } else
+            {
+                return;
+            }
+
             var adapterScan = CrossBluetoothLE.Current.Adapter;
             DeviceList.Clear();
             ids.Clear();
@@ -210,10 +222,6 @@ namespace Apptiview.Views
 
             }
 
-            /*
-             * Scanner can find 0 devices but not "Time out"
-             * Caused because it will find devices but not print them out
-            */
             adapterScan.ScanTimeoutElapsed += (sender1, e1) =>
             {
                 adapterScan.StopScanningForDevicesAsync();

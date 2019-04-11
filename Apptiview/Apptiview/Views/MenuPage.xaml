@@ -18,7 +18,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <ListView x:Name="LogoutMenu" HasUnevenRows="True" VerticalOptions="End" >
+        <ListView x:Name="LogoutMenu" HasUnevenRows="True" VerticalOptions="End">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

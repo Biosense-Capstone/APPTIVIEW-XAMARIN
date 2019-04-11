@@ -51,6 +51,7 @@ namespace Apptiview.Views
 
                 await Navigation.PushModalAsync(new NavigationPage(new LogInPage()));
                 LogoutMenu.SelectedItem = null;
+                ListViewMenu.SelectedItem = menuItems[0];
 
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
                 await RootPage.NavigateFromMenu(id);

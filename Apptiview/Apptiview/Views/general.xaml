@@ -13,7 +13,6 @@
         
         <ScrollView>
             <StackLayout Spacing="0">
-                <!--<Frame Padding="0" CornerRadius="10" BackgroundColor="#BB6F6B" Margin="0,0,0,10">-->
                 <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
                     <StackLayout>
                         <Label Text="Headband Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
@@ -24,20 +23,21 @@
 
                 <!--<Label Text="{Binding packetLossCount}"  TextColor="White" Margin="0,10,0,10"/>-->
 
-                <!--<Frame Padding="0" CornerRadius="10" BackgroundColor="#EA9674" Margin="0,10,0,10">-->
                 <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
                     <StackLayout>
-                        <Label Text="Headset Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
-                        <microcharts:ChartView x:Name="fourierChart" HeightRequest="250" Chart="{Binding ChartFourier}"/>
+                        <Label Text="Fourier Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                        <Grid>
+                            <microcharts:ChartView x:Name="fourierChart" HeightRequest="250" Chart="{Binding ChartFourier}"/>
+                            <microcharts:ChartView x:Name="fourierScaleChart" HeightRequest="250" Chart="{Binding ChartFScale}"/>
+                        </Grid>
                         <Label Text="Time" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
                     </StackLayout>
                 </Frame>
 
-                <!--<Frame Padding="0" CornerRadius="10" BackgroundColor="#FCBC80" Margin="0,10,0,0">-->
                 <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
                     <StackLayout>
                         <Label Text="Headset Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
-                        <microcharts:ChartView x:Name="altChart" HeightRequest="250" Chart="{Binding Chart}"/>
+                        <microcharts:ChartView x:Name="temperatureChart" HeightRequest="250" Chart="{Binding ChartTemperature}"/>
                         <Label Text="Time" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
                     </StackLayout>
                 </Frame>

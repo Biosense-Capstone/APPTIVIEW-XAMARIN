@@ -1156,6 +1156,7 @@
           "Meta.Numerics": "4.0.7",
           "Microcharts": "0.7.1",
           "Microcharts.Forms": "0.7.1",
+          "Microsoft.Azure.Mobile.Client": "4.1.1",
           "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.1.1",
           "Plugin.BLE": "1.3.0",
           "Xamarin.Forms": "3.4.0.1029999",
@@ -4941,6 +4942,7 @@
       "Apptiview >= 1.0.0",
       "Microcharts >= 0.7.1",
       "Microcharts.Forms >= 0.7.1",
+      "Microsoft.Azure.Mobile.Client >= 4.1.1",
       "Microsoft.Azure.Mobile.Client.SQLiteStore >= 4.1.1",
       "Plugin.BLE >= 1.3.0",
       "Xamarin.Android.Support.Design >= 28.0.0.1",
@@ -4995,6 +4997,10 @@
           "Microcharts.Forms": {
             "target": "Package",
             "version": "[0.7.1, )"
+          },
+          "Microsoft.Azure.Mobile.Client": {
+            "target": "Package",
+            "version": "[4.1.1, )"
           },
           "Microsoft.Azure.Mobile.Client.SQLiteStore": {
             "target": "Package",
