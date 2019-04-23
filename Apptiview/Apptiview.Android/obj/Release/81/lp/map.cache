@@ -54,3 +54,5 @@ PInvoke.NCrypt
 PInvoke.Windows.Core
 Validation
 Xamarin.Android.Support.CustomTabs
+Microsoft.Azure.Mobile.Client.SQLiteStore
+SQLite-net

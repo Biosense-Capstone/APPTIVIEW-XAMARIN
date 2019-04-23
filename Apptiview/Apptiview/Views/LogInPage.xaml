@@ -19,6 +19,7 @@
                     <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" TextColor="White" PlaceholderColor="#CCCCCC" x:Name="pass"/>
                 </StackLayout>
                 <Button Grid.Row="1" Text="Log In" x:Name="logInButton" Clicked="LogInCheck" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+                <Button Grid.Row="2" Text="Create Account" x:Name="accountButton" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

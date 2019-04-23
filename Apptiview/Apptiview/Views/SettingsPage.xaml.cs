@@ -21,6 +21,8 @@ using Microsoft.WindowsAzure.MobileServices.Sync;
 using System.Collections;
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using System.IO;
+
+using SQLite;
 //using Newtonsoft.Json;
 
 namespace Apptiview.Views
@@ -30,88 +32,26 @@ namespace Apptiview.Views
     {
         static bool scanning = false;
 
-        public ObservableCollection<string> DeviceList { get; set; }
         public ObservableCollection<string> StateBT { get; set; }
         public List<Guid> ids;
 
-        public ObservableCollection<string> testList { get; set; }
-        public class Account
+        //public ObservableCollection<string> testList { get; set; }
+        public class testSQL
         {
-            //[JsonProperty (PropertyName = "id")]
-            [Newtonsoft.Json.JsonProperty("id")]
-            public string id
-            {
-                get { return id; }
-                set { id = value; }
-            }
-
-            //[JsonProperty(PropertyName = "Username")]
-            [Newtonsoft.Json.JsonProperty("Username")]
-            public string Username
-            {
-                get { return Username; }
-                set { Username = value; }
-            }
-
-            //[JsonProperty(PropertyName = "Password")]
-            [Newtonsoft.Json.JsonProperty("Password")]
-            public string Password
-            {
-                get { return Password; }
-                set { Password = value; }
-            }
+            [PrimaryKey, AutoIncrement]
+            public int Id { get; set; }
+            public int data { get; set; }
+            public string stringData { get; set; }
         }
 
-        public class AzureDataService
+        public class bluetoothList
         {
-            IMobileServiceClient client { get; set; }
-            IMobileServiceSyncTable<Account> accountTable;
-
-            public async Task Initialize()
-            {
-                // Our client
-                client = new MobileServiceClient("https://apptiviewdatabaseapp.azurewebsites.net");
-
-                // Our local storage path
-                string path = "localstore.db";
-                //var path = Path.Combine(MobileServiceClient.DefaultDatabasePath, "syncstore.db");
-                var store = new MobileServiceSQLiteStore(path);
-                //store.DefineTable<Account>();
-                await client.SyncContext.InitializeAsync(store, new MobileServiceSyncHandler());
-
-                // Our sync table
-                accountTable = client.GetSyncTable<Account>();
-            }
-
-            //public async Task<List<Account>> getAccount()
-            public async Task<List<Account>> getAccount()
-            {
-                await SyncAccount();
-                return await accountTable.ToListAsync();
-                //return accountTable.TableName;
-            }
-
-            public async Task AddAccount(string user, string pass)
-            {
-                var newAccount = new Account
-                {
-                    Username = "TEST",
-                    Password = "test"
-                };
-                await accountTable.InsertAsync(newAccount);
-                //Synchronize coffee
-                await SyncAccount();
-            }
-
-            public async Task SyncAccount()
-            {
-                // Pull and then sync
-                await accountTable.PullAsync("allAccounts", accountTable.CreateQuery());
-                await client.SyncContext.PushAsync();
-            }
+            public string name { get; set; }
+            public string Connected { get; set; } = "Not connected";
         }
-        public AzureDataService database;
-        public ObservableCollection<Account> accountList;
+        public ObservableCollection<bluetoothList> DeviceList { get; set; }
+        public bluetoothList headbandDevice = new bluetoothList();
+        public bluetoothList headsetDevice = new bluetoothList();
 
         IAdapter adapter;
 
@@ -119,10 +59,37 @@ namespace Apptiview.Views
         {
             InitializeComponent();
 
-            // Initialize database
-            database = new AzureDataService();
-            InitializeDatabase(database);
-            accountList = new ObservableCollection<Account>();
+            /*
+            // Initialize local storage
+            // Get an absolute path to the database file
+            var databasePath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), "MyData.db");
+            var db = new SQLiteConnection(databasePath);
+            db.CreateTable<testSQL>();
+            Console.WriteLine("Table created!");
+
+            var stock = new testSQL()
+            {
+                data = 10,
+                stringData = "test"
+            };
+            var stock1 = new testSQL()
+            {
+                data = 5,
+                stringData = "Fuck you"
+            };
+            var stock2 = new testSQL()
+            {
+                data = 5,
+                stringData = "Firetruck"
+            };
+            db.Insert(stock);
+            db.Insert(stock1);
+            db.Insert(stock2);
+            var query = db.Table<testSQL>().Where(v => v.stringData.StartsWith("F"));
+            foreach (var stockTemp in query)
+                Console.WriteLine("Stock: " + stockTemp.stringData);
+            Console.WriteLine("Auto stock data: {0}", stock.data);
+            */
 
             // Set up adapter and ble
             var ble = CrossBluetoothLE.Current;
@@ -139,7 +106,7 @@ namespace Apptiview.Views
             }
 
             // Create Device list
-            this.DeviceList = new ObservableCollection<string>();
+            this.DeviceList = new ObservableCollection<bluetoothList>();
             // Set up ids
             this.ids = new List<Guid>();
 
@@ -168,20 +135,46 @@ namespace Apptiview.Views
             {
                 return;
             }
-            string[] splitString = e.SelectedItem.ToString().Split('.');
+            //string[] splitString = e.SelectedItem.ToString().Split('.');
+            bluetoothList temp = (bluetoothList)e.SelectedItem;
+            string[] splitString = temp.name.Split('.');
             int position = Int32.Parse(splitString[0]);
             if (splitString[1] == " BHB")
             {
-                Guids._guids.HBConnected = true;
-                Guids._guids.HeadbandGuid = ids[position-1];
+                if (Guids._guids.HBConnected == false)
+                {
+                    Guids._guids.HBConnected = true;
+                    headbandDevice.Connected = "Connected";
+                    Guids._guids.HeadbandGuid = ids[position - 1];
+                    DisplayAlert("Connected to device", splitString[1], "Ok");
+                } else
+                {
+                    Guids._guids.HBConnected = false;
+                    headbandDevice.Connected = "Not connected";
+                    DisplayAlert("Disconnected from device", splitString[1], "Ok");
+                }
+                devices.ItemsSource = null;
+                devices.ItemsSource = DeviceList;
+                devices.SelectedItem = null;
             }
             else if (splitString[1] == " BHS")
             {
-                Guids._guids.HSConnected = true;
-                Guids._guids.HeadsetGuid = ids[position-1];
+                if (Guids._guids.HSConnected == false)
+                {
+                    Guids._guids.HSConnected = true;
+                    headsetDevice.Connected = "Connected";
+                    Guids._guids.HeadsetGuid = ids[position - 1];
+                    DisplayAlert("Connected to device", splitString[1], "Ok");
+                } else
+                {
+                    Guids._guids.HSConnected = false;
+                    headsetDevice.Connected = "Not connected";
+                    DisplayAlert("Disconnected from device", splitString[1], "Ok");
+                }
+                devices.ItemsSource = null;
+                devices.ItemsSource = DeviceList;
+                devices.SelectedItem = null;
             }
-            
-            DisplayAlert("Connected to device", e.SelectedItem.ToString(), "Ok");
         }
 
         async void ScanBluetooth(Object sender, System.EventArgs e)
@@ -197,15 +190,25 @@ namespace Apptiview.Views
             }
 
             var adapterScan = CrossBluetoothLE.Current.Adapter;
-            DeviceList.Clear();
+            //DeviceList.Clear();
             ids.Clear();
             int count = 1;
 
             adapterScan.DeviceDiscovered += (s, a) =>
             {
-                if (a.Device.Name == "BHB" || a.Device.Name == "BHS")
-                {                    
-                    DeviceList.Add(count + ". " + a.Device.Name);
+                if (a.Device.Name != null && (a.Device.Name == "BHB" || a.Device.Name.Substring(0,3) == "BHS"))
+                {
+                    if (a.Device.Name == "BHB")
+                    {
+                        headbandDevice.name = count + ". " + a.Device.Name;
+                        DeviceList.Add(headbandDevice);
+                        //DeviceList.Add(count + ". " + a.Device.Name);
+                    } else
+                    {
+                        headsetDevice.name = count + ". " + a.Device.Name.Substring(0, 3);
+                        DeviceList.Add(headsetDevice);
+                        //DeviceList.Add(count + ". " + a.Device.Name.Substring(0, 3));
+                    }
                     ids.Add(a.Device.Id);
                     //Plugin.BLE.Abstractions.AdvertisementRecord[] advertisement = a.Device.AdvertisementRecords.ToArray();
                     count++;
@@ -234,31 +237,5 @@ namespace Apptiview.Views
 
             BindingContext = this;
         }
-
-        async void InitializeDatabase(AzureDataService database)
-        {
-            await database.Initialize();
-            return;
-        }
-
-        void SQLQuery(object sender, SelectedItemChangedEventArgs e)
-        {
-            //GetItemsAsync();
-            //Account item = new Account { User = "ched", Pass = "chedder", Id = "1" };
-            //MobileService.GetTable<Account>().InsertAsync(item);
-        }
-
-        async void grabTable(object sender, SelectedItemChangedEventArgs e)
-        {
-            //grabBtn.IsEnabled = false;
-            //List<Account> accounts = await database.getAccount();
-            //grabBtn.IsEnabled = true;
-        }
-
-        //public Task<List<string>> GetItemsAsync()
-        //{
-            
-        //    return database.Table<string>().ToListAsync();
-        //}
     }
 }

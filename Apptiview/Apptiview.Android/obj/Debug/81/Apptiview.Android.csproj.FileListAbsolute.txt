@@ -131,6 +131,8 @@ C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Deb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview\bin\Debug\netstandard2.0\Apptiview.dll
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\bin\Debug\Apptiview.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Apptiview.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Meta.Numerics.dll.mdb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\linksrc\Plugin.BLE.Abstractions.dll.mdb

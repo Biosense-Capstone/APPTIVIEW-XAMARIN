@@ -36,15 +36,72 @@
 
                 <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
                     <StackLayout>
-                        <Label Text="Headset Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                        <Label Text="Temperature Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
                         <microcharts:ChartView x:Name="temperatureChart" HeightRequest="250" Chart="{Binding ChartTemperature}"/>
                         <Label Text="Time" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
                     </StackLayout>
                 </Frame>
+
+                <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
+                    <StackLayout>
+                        <Label Text="AccelX Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                        <microcharts:ChartView x:Name="accelXChart" HeightRequest="250" Chart="{Binding ChartAccelX}"/>
+                        <Label Text="Time" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
+                    <StackLayout>
+                        <Label Text="AccelY Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                        <microcharts:ChartView x:Name="accelYChart" HeightRequest="250" Chart="{Binding ChartAccelY}"/>
+                        <Label Text="Time" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
+                    <StackLayout>
+                        <Label Text="AccelZ Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                        <microcharts:ChartView x:Name="accelZChart" HeightRequest="250" Chart="{Binding ChartAccelZ}"/>
+                        <Label Text="Time" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
+                    <StackLayout>
+                        <Label Text="GyX Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                        <microcharts:ChartView x:Name="gyXChart" HeightRequest="250" Chart="{Binding ChartGyX}"/>
+                        <Label Text="Time" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
+                    <StackLayout>
+                        <Label Text="GyY Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                        <microcharts:ChartView x:Name="gyYChart" HeightRequest="250" Chart="{Binding ChartGyY}"/>
+                        <Label Text="Time" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
+                    <StackLayout>
+                        <Label Text="GyZ Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                        <microcharts:ChartView x:Name="gyZChart" HeightRequest="250" Chart="{Binding ChartGyZ}"/>
+                        <Label Text="Time" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+                </Frame>
+
+                <!--<Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
+                    <StackLayout>
+                        <Label Text="Pressure Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                        <microcharts:ChartView x:Name="presChart" HeightRequest="250" Chart="{Binding ChartPres}"/>
+                        <Label Text="Time" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+                </Frame>-->
+
             </StackLayout>
         </ScrollView>
         
-        <Grid HeightRequest="80">
+        <Grid MinimumHeightRequest="40">
             <Button Text="Start Workout" x:Name="startBtn"  Clicked="Start_Button_Clicked" HorizontalOptions="Center" IsEnabled="True" HeightRequest="60" Grid.Column="0" BackgroundColor="#FFFFFF" TextColor="Black" Margin="3"/>
             <Button Text="Finish Workout" x:Name="finishBtn"  Clicked="Finish_Button_Clicked" HorizontalOptions="Center" IsEnabled="False" HeightRequest="60" Grid.Column="1" BackgroundColor="#FFFFFF" TextColor="Black" Margin="3"/>
         </Grid>
