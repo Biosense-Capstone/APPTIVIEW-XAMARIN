@@ -18,6 +18,9 @@ C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Deb
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\PInvoke.Windows.Core.dll
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Plugin.BLE.Abstractions.dll
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Plugin.BLE.dll
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Plugin.CurrentActivity.dll
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Plugin.Geolocator.dll
+C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\Plugin.Permissions.dll
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\SkiaSharp.dll
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\SkiaSharp.Views.Android.dll
 C:\Users\Andrew Pavey\source\repos\Apptiview\Apptiview\Apptiview.Android\obj\Debug\81\android\assets\SkiaSharp.Views.Forms.dll

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.Apptiview" android:installLocation="auto" android:versionCode="3" android:versionName="Working Data">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.Apptiview" android:installLocation="auto" android:versionName="2.1" android:versionCode="7">
   <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
   <uses-permission android:name="android.permission.BLUETOOTH" />
   <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -9,6 +9,8 @@
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-feature android:name="android.hardware.location.gps" />
+  <uses-feature android:name="android.hardware.location.network" />
   <application android:label="Apptiview.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:debuggable="true">
     <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/ic_launcher" android:label="Apptiview" android:roundIcon="@mipmap/ic_round_launcher" android:theme="@style/MainTheme" android:name="md526dd59c73de1f9b111a169e042aaa8b9.MainActivity">
       <intent-filter>

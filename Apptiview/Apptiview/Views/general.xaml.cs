@@ -19,6 +19,10 @@ using Microcharts;
 using Entry = Microcharts.Entry;
 
 using Plugin.BLE;
+using Plugin.Geolocator;
+
+using Android.Bluetooth.LE;
+//using Plugin.Geolocator.Abstractions;
 
 namespace Apptiview.Views
 {
@@ -74,6 +78,7 @@ namespace Apptiview.Views
             List<Entry> chartEntries = new List<Entry>();
             // The list that will contain all the fourier data
             List<Entry> fourierTransform = new List<Entry>();
+            List<Entry> barEntries = new List<Entry>();
 
             // Headset entries
             List<Entry> temperatureEntries = new List<Entry>();
@@ -84,6 +89,8 @@ namespace Apptiview.Views
             List<Entry> gyYEntries = new List<Entry>();
             List<Entry> gyZEntries = new List<Entry>();
             List<Entry> presEntries = new List<Entry>();
+
+            List<Entry> speedEntries = new List<Entry>();
 
             // First pass to properly remove the correct value of fourier
             bool firstpass = false;
@@ -99,6 +106,11 @@ namespace Apptiview.Views
             int elect2_2 = 0;
             int elect1_3 = 0;
             int elect2_3 = 0;
+
+            float thetaWave = 0;
+            float alphaWave = 0;
+            float betaWave = 0;
+            float totalPower = 0;
 
             CrossBluetoothLE.Current.Adapter.DeviceAdvertised += (s, e) =>
             {
@@ -160,18 +172,6 @@ namespace Apptiview.Views
                             entries.Add(new Entry(input3) { Color = SKColor.FromHsl(1, 100, 100, 255) });
                             chartEntries.Add(new Entry(input3) { Color = SKColor.FromHsl(1, 100, 100, 255) });
 
-                            //// Add an entry with a title
-                            //entries.Add(new Entry(elect1_0) { Color = SKColor.FromHsl(1, 100, 100, 255), ValueLabel = elect1_0.ToString() });
-                            //chartEntries.Add(new Entry(elect1_0) { Color = SKColor.FromHsl(1, 100, 100, 255), ValueLabel = elect1_0.ToString() });
-
-                            //// Add the rest of the entries
-                            //entries.Add(new Entry(elect1_1) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-                            //chartEntries.Add(new Entry(elect1_1) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-                            //entries.Add(new Entry(elect1_2) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-                            //chartEntries.Add(new Entry(elect1_2) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-                            //entries.Add(new Entry(elect1_3) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-                            //chartEntries.Add(new Entry(elect1_3) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-
                             packetCount = 0;
                         } else
                         {
@@ -184,16 +184,6 @@ namespace Apptiview.Views
                             chartEntries.Add(new Entry(input2) { Color = SKColor.FromHsl(1, 100, 100, 255) });
                             entries.Add(new Entry(input3) { Color = SKColor.FromHsl(1, 100, 100, 255) });
                             chartEntries.Add(new Entry(input3) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-
-                            // Add all the entries
-                            //entries.Add(new Entry(elect1_0) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-                            //chartEntries.Add(new Entry(elect1_0) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-                            //entries.Add(new Entry(elect1_1) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-                            //chartEntries.Add(new Entry(elect1_1) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-                            //entries.Add(new Entry(elect1_2) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-                            //chartEntries.Add(new Entry(elect1_2) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-                            //entries.Add(new Entry(elect1_3) { Color = SKColor.FromHsl(1, 100, 100, 255) });
-                            //chartEntries.Add(new Entry(elect1_3) { Color = SKColor.FromHsl(1, 100, 100, 255) });
                             packetCount++;
                         }
 
@@ -202,10 +192,6 @@ namespace Apptiview.Views
                         headBandInput.Add(input1);
                         headBandInput.Add(input2);
                         headBandInput.Add(input3);
-                        //headBandInput.Add(elect1_0);
-                        //headBandInput.Add(elect1_1);
-                        //headBandInput.Add(elect1_2);
-                        //headBandInput.Add(elect1_3);
 
                         var chart = new LineChart()
                         {
@@ -253,11 +239,73 @@ namespace Apptiview.Views
                                 BackgroundColor = SKColor.Parse("#393E46")
                             };
                             this.fourierChart.Chart = fChart;
+
+                            totalPower = 0;
+                            thetaWave = 0;
+                            alphaWave = 0;
+                            betaWave = 0;
+                            for (int n=1; n<125; n++)
+                            {
+
+                                if (n >= 30 && n <= 75)
+                                {
+                                    betaWave += (float)xt[n];
+                                } else if (n >= 20 && n < 30) {
+                                    alphaWave += (float)xt[n];
+                                } else if (n >= 5 && n < 20)
+                                {
+                                    thetaWave += (float)xt[n];
+                                }
+                                else
+                                {
+                                    totalPower += (float)xt[n];
+                                }
+                            }
+                            if (barEntries.Count > 0)
+                            {
+                                barEntries.RemoveAt(0);
+                                barEntries.RemoveAt(0);
+                                barEntries.RemoveAt(0);
+                                barEntries.RemoveAt(0);
+                            }
+                            barEntries.Add(new Entry(thetaWave) { Color = SKColor.Parse("#8B4B62"), ValueLabel = betaWave.ToString(), Label = "Sleepiness" });
+                            barEntries.Add(new Entry(alphaWave) { Color = SKColor.Parse("#BB6F6B"), ValueLabel = betaWave.ToString(), Label = "Relaxation" });
+                            barEntries.Add(new Entry(betaWave) { Color = SKColor.Parse("#FCBC80"), ValueLabel = betaWave.ToString(), Label = "Concentration" });
+                            barEntries.Add(new Entry(totalPower) { Color = SKColor.Parse("#EA9674"), ValueLabel = totalPower.ToString(), Label = "Other" });
+                            var barChart = new DonutChart
+                            {
+                                Entries = barEntries,
+                                BackgroundColor = SKColor.Parse("#393E46"),
+                                LabelTextSize = 40,
+                            };
+                            this.barGraphChart.Chart = barChart;
                         }
                     }
                     else if (Guids._guids.HSConnected == true && Guids._guids.HeadsetGuid == e.Device.Id)
                     {
                         Plugin.BLE.Abstractions.AdvertisementRecord[] advertisementHS = e.Device.AdvertisementRecords.ToArray();
+
+
+                        // Geolocator
+                        //packetTemp++;
+                        //if (CrossGeolocator.IsSupported && IsLocationAvailable() && CrossGeolocator.Current.IsGeolocationEnabled && packetTemp == 10)
+                        //{
+                        //    double speed = await getSpeed();
+                        //    speedEntries.Add(new Entry((float)speed) { Color = SKColor.FromHsl(1, 100, 100, 255), ValueLabel = speed.ToString() });
+                        //    packetTemp = 0;
+
+                        //    var speedChart = new LineChart()
+                        //    {
+                        //        Entries = speedEntries,
+                        //        LabelTextSize = 100,
+                        //        LineSize = 10,
+                        //        LineMode = LineMode.Straight,
+                        //        PointSize = 20,
+                        //        BackgroundColor = SKColor.Parse("#393E46")
+                        //    };
+                        //    this.speedChart.Chart = speedChart;
+                        //}
+
 
                         // Data variables
                         int tempHS = 0;
@@ -417,17 +465,6 @@ namespace Apptiview.Views
                             BackgroundColor = SKColor.Parse("#393E46")
                         };
                         this.gyZChart.Chart = gyZChart;
-
-                        //var presChart = new LineChart()
-                        //{
-                        //    Entries = presEntries,
-                        //    LabelTextSize = 100,
-                        //    LineSize = 10,
-                        //    LineMode = LineMode.Straight,
-                        //    PointSize = 20,
-                        //    BackgroundColor = SKColor.Parse("#393E46")
-                        //};
-                        //this.presChart.Chart = presChart;
                     }
                 }
             };
@@ -455,5 +492,17 @@ namespace Apptiview.Views
             ((Button)sender).IsEnabled = false;
             startBtn.IsEnabled = true;
         }
+
+        //public bool IsLocationAvailable()
+        //{
+        //    return CrossGeolocator.Current.IsGeolocationAvailable;
+        //}
+
+        //async Task<double> getSpeed()
+        //{
+        //    //Task<Plugin.Geolocator.Abstractions.Position> position;
+        //    Position position = await CrossGeolocator.Current.GetPositionAsync();
+        //    return position.Speed;
+        //}
     }
 }

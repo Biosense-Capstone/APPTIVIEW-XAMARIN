@@ -159,3 +159,4 @@ C:\Users\Andrew Pavey\source\repos\Apptiview\AppBackend\obj\Debug\AppBackend.csp
 C:\Users\Andrew Pavey\source\repos\Apptiview\AppBackend\obj\Debug\AppBackend.csproj.CopyComplete
 C:\Users\Andrew Pavey\source\repos\Apptiview\AppBackend\obj\Debug\AppBackend.dll
 C:\Users\Andrew Pavey\source\repos\Apptiview\AppBackend\obj\Debug\AppBackend.pdb
+C:\Users\Andrew Pavey\source\repos\Apptiview\AppBackend\obj\Debug\AppBackend.csprojAssemblyReference.cache

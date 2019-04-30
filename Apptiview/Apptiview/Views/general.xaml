@@ -13,6 +13,7 @@
         
         <ScrollView>
             <StackLayout Spacing="0">
+
                 <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
                     <StackLayout>
                         <Label Text="Headband Data" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
@@ -29,6 +30,16 @@
                         <Grid>
                             <microcharts:ChartView x:Name="fourierChart" HeightRequest="250" Chart="{Binding ChartFourier}"/>
                             <microcharts:ChartView x:Name="fourierScaleChart" HeightRequest="250" Chart="{Binding ChartFScale}"/>
+                        </Grid>
+                        <Label Text="Time" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="0" CornerRadius="10" BackgroundColor="#393E46" Margin="0,10,0,10">
+                    <StackLayout>
+                        <Label Text="Concentration" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
+                        <Grid>
+                            <microcharts:ChartView x:Name="barGraphChart" HeightRequest="250" Chart="{Binding ChartBar}"/>
                         </Grid>
                         <Label Text="Time" HorizontalOptions="Center" TextColor="White" FontSize="Medium"/>
                     </StackLayout>

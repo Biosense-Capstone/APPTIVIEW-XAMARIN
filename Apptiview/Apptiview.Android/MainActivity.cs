@@ -16,6 +16,7 @@ namespace Apptiview.Droid
     {
 
         public bool permissionsGranted;
+        private Bundle bundle;
         readonly string[] PermissionsLocation =
         {
           Manifest.Permission.AccessCoarseLocation,
@@ -32,8 +33,6 @@ namespace Apptiview.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
             Locationpermissions();
-
-            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
         }
 
         bool Locationpermissions()
